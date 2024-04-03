@@ -40,7 +40,9 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="60sp"
+        android:layout_marginTop="10dp"
+        android:lines="1"
+        android:textSize="@dimen/digits_text_size"
         app:layout_constraintEnd_toStartOf="@+id/operand"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="@+id/left_guideline"
@@ -51,9 +53,10 @@
         android:id="@+id/operand"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="60sp"
+        android:textSize="@dimen/digits_text_size"
         app:layout_constraintEnd_toStartOf="@+id/second_digit"
         app:layout_constraintStart_toEndOf="@+id/first_digit"
         app:layout_constraintTop_toBottomOf="@+id/nameTextView"
@@ -63,9 +66,11 @@
         android:id="@+id/second_digit"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:textAlignment="center"
+        android:lines="1"
         android:textColor="@color/white"
-        android:textSize="60sp"
+        android:textSize="@dimen/digits_text_size"
         app:layout_constraintEnd_toStartOf="@+id/equally"
         app:layout_constraintStart_toEndOf="@+id/operand"
         app:layout_constraintTop_toBottomOf="@+id/nameTextView"
@@ -75,10 +80,11 @@
         android:id="@+id/equally"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:text="@string/ravno"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="60sp"
+        android:textSize="@dimen/digits_text_size"
         app:layout_constraintEnd_toStartOf="@+id/input_search"
         app:layout_constraintStart_toEndOf="@+id/second_digit"
         app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
@@ -96,7 +102,7 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textColorHint="#AEAFB4"
-        android:textSize="60sp"
+        android:textSize="@dimen/digits_text_size"
         app:layout_constraintEnd_toStartOf="@+id/right_guideline"
         app:layout_constraintStart_toEndOf="@+id/equally"
         app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
@@ -107,13 +113,13 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="40sp"
+        android:textSize="30sp"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/first_digit"
-        android:text="Молодец, правильно!"
-        tools:visibility="gone" />
+        android:text="Молодец, Андрей, правильно!"
+ />
 
     <TextView
         android:id="@+id/wrong_answer"
@@ -126,7 +132,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/first_digit"
-        android:text="Неправильно!!!" />
+        android:text="Неправильно, Андрейка!!!"
+        tools:visibility="gone"
+        />
 
     <Button
         android:id="@+id/new_task_button"
