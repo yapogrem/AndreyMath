@@ -1,5 +1,8 @@
 package com.example.andreymath
 
+const val UPPER = 20
+const val LOWER = 4
+
 class ArithmeticTaskImpl:ArithmeticTask {
     override fun getTask(): Task {
         val firstDigit = getFirstDigit()
@@ -16,12 +19,12 @@ class ArithmeticTaskImpl:ArithmeticTask {
     }
 
 
-    private fun getFirstDigit(): Int = (5..10).random()
+    private fun getFirstDigit(): Int = (LOWER..UPPER).random()
 
     private fun getSecondDigit(firstDigit: Int, operand: Operations): Int {
         return when (operand) {
-            Operations.PLUS -> (0..10 - firstDigit).random()
-            Operations.MINUS -> (0..firstDigit).random()
+            Operations.PLUS -> (2..UPPER - firstDigit).random()
+            Operations.MINUS -> (2..< firstDigit).random()
         }
     }
 }
